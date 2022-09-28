@@ -21,6 +21,6 @@ tablaEmpleados=pd.read_csv('./empleados.csv')
 
 tablaAnalistas=(tablaEmpleados[(tablaEmpleados["edad"]<30)&(tablaEmpleados["salario"]>5500000)])
 archivoHTML=tablaAnalistas.to_html()
-archivoTEXTO=open("analistas.html","w")
+archivoTEXTO=open("analistas.html","w",encoding="utf-8") #utf-8 para exportar los caracteres
 archivoTEXTO.write(archivoHTML)
 archivoTEXTO.close()
